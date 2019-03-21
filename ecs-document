@@ -1,0 +1,42 @@
+=====ECS (elastic container service )====
+
+ecs is a container service , alternate for ecs is eks
+
+keyword::::
+
+ecs
+
+cluster ( group of ec2, vpc ,security group )
+
+task definition ( template of container is going to create with ecr image )  
+
+service: runnung task definition (input for the service is id )
+
+cloudwatch log/events: to see how many tasks are running 
+
+                                    
+
+==========================================================
+
+1) go to ecs and create the cluster 
+
+create cluster ---ec2linux+networking ---
+
+give the cluster name , no.of instances , select keypair ,vpc , and give the role
+
+2) go to ecr repo and copy the uri   like 623005405181.dkr.ecr.ap-south-1.amazonaws.com/apache
+
+3) create the task definition 
+
+new task definition ----ec2
+
+td name , container name , ecr repo uri , softlimit ,
+
+4) create a alb  and register instances
+
+5) create a service 
+
+give no.of tasks , add load balance , give iam role
+
+
+and browse the lb url
